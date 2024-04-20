@@ -1,0 +1,93 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #fef3e2;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+
+#start-frame {
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  font-size: 100px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 3px 5px #00ffff;
+}
+button {
+  padding: 30px 40px;
+  font-size: 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  font-weight: bold;
+  background: #fff;
+  color: #000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.c {
+  color: #fff;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s both;
+}
+
+.content {
+  margin: 20px;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 100px;
+  line-height: 1.5;
+  padding: 200px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
