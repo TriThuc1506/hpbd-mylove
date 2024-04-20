@@ -2,23 +2,21 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #fef3e2;
-  font-family: "Roboto", sans-serif;
+  background-image: url("http://itplus-academy.edu.vn/upload/c47d9c29fc44c2b7996a2613aec3c1f9/files/pas.jpg");
+  background-size: cover;
+  font-family: "Inconsolata", sans-serif;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px;
 }
-
 
 #start-frame {
   line-height: 2;
@@ -35,6 +33,7 @@ h1 {
   text-shadow: 3px 5px #00ffff;
 }
 button {
+  font-family: "Inconsolata", sans-serif;
   padding: 30px 40px;
   font-size: 30px;
   background: #000;
@@ -51,8 +50,16 @@ button:hover {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.inconsolata-content {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 .c {
-  color: #fff;
+  color: #0f0f0f;
   opacity: 0;
 }
 
@@ -75,19 +82,36 @@ button:hover {
   animation: fadeIn 1s both;
 }
 
+.fadeOut {
+  animation: fadeOut 1s both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
 .content {
-  margin: 20px;
   font-style: italic;
-  font-family: "Roboto", sans-serif;
-  font-size: 100px;
-  line-height: 1.5;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 70px;
+  line-height: 1.8;
   padding: 200px 0;
   text-align: center;
   width: 100%;
-  margin: 0 auto;
 }
 
 .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  /* animation-duration: 1s;
+  animation-fill-mode: both; */
 }

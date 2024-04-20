@@ -1,24 +1,29 @@
 function fadeIn() {
-  const text = $(".content")
+  let text = $(".content")
     .text()
-    .replace(/^\s+|\s+$/g, "");
+    .replace(/^\s+|\s+$/g, "")
+    .split(" ");
+
+  text = text.filter((item) => item !== "");
   let length = text.length;
   let i = 0;
   let txt;
   const html = [];
-  const sp = 4;
-  for (; i < length; i += sp) {
-    txt = text.substring(i, i + sp);
 
+  for (; i < length; i++) {
+    txt = text[i] + " ";
     html.push('<span class="c animated">' + txt + "</span>");
+    if (text[i].includes("!")) {
+      html.push("<br />");
+    }
   }
   $(".content").removeClass("c").html(html.join(""));
-
   for (i = 0, length = html.length; i < length; i++) {
     !((i) => {
       setTimeout(() => {
         $(".content").find(".animated").eq(i).addClass("fadeIn");
-      }, i * 420);
+
+      }, i * 455);
     })(i);
   }
 }
