@@ -12,9 +12,11 @@ function fadeIn() {
 
   for (; i < length; i++) {
     txt = text[i] + " ";
-    html.push('<span class="c animated">' + txt + "</span>");
+    
     if (text[i].includes("!")) {
       html.push("<br />");
+    }else {
+      html.push('<span class="c animated">' + txt + "</span>");
     }
   }
   $(".content").removeClass("c").html(html.join(""));
@@ -23,16 +25,19 @@ function fadeIn() {
       setTimeout(() => {
         $(".content").find(".animated").eq(i).addClass("fadeIn");
 
-      }, i * 455);
+      }, i * 250);
     })(i);
   }
 }
 
 document.querySelector("#start").onclick = () => {
-  document.querySelector("#audio").play();
+  const audio = new Audio("./myLove.mp3");
+  audio.play();
+  audio.loop = true;
+
   document.querySelector("#start-frame").style = "display: none";
   document.querySelector(".content").style = "display: block";
+  document.querySelector(".content").style.backgroundImage = "url('https://i.pinimg.com/564x/00/65/a3/0065a38d22a4b6579b668a7bc7491df1.jpg')";
   document.querySelector("#heart").hidden = false;
-  document.querySelector("body").style.backgroundColor = "#f953c6";
   fadeIn();
 };
